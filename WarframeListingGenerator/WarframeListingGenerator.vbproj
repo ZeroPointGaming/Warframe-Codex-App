@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{786D7278-5B72-4ED8-9624-08723E1BBF6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WarframeListingGenerator.My.MyApplication</StartupObject>
+    <RootNamespace>WarframeListingGenerator</RootNamespace>
+    <AssemblyName>WarframeListingGenerator</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WarframeListingGenerator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WarframeListingGenerator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>warframe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WarframeInformationPanel.Designer.vb">
+      <DependentUpon>WarframeInformationPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WarframeInformationPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarframeInformationPanel.resx">
+      <DependentUpon>WarframeInformationPanel.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_AstralAutopsy.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_AstralSlash.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_BlazingSteel.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_BleedingEdge.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_CuttingEdge.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_Extend.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_Furor.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_GalvanizedBlade.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_GlacialEdge.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_MeteorCrash.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_NebulaBore.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_PoisonousSting.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_SearingSteel.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_SuddenImpact.png" />
+    <Content Include="Resources\ArchwingMeleeMods\ArchwingMelee_TemperedBlade.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_ArgonPlating.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_AuxiliaryPower.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_EfficientTransferral.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_EnergyAmplifier.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_EnergyInversion2.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_EnhancedDurability.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_HyperionThrusters.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_KineticDiversion.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_MorphicTransformer.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_PrimedMorphicTransformer.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_SuperiorDefenses.png" />
+    <Content Include="Resources\ArchwingMods\Archwing_SystemReroute.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_AutomaticTrigger.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_CombustionRounds.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_CometBlast.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_DualRounds.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_ElectrifiedBarrel.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_HollowedBullets.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_ifiedMunitions.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_MagazineExtension.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_MagmaChamber.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_ParallaxScope.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_PolarMagazine.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_QuasarDrill.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_RubedoLinedBarrel.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_ShellRush.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_VenomousClip.png" />
+    <Content Include="Resources\ArchwingWeaponMods\ArchwingWeapon_ZodiacShred.png" />
+    <Content Include="Resources\Materials\AlloyPlate64.png" />
+    <Content Include="Resources\Materials\ArgonCrystal64.png" />
+    <Content Include="Resources\Materials\CetusWisp64.png" />
+    <Content Include="Resources\Materials\CharcElectroplax.png" />
+    <Content Include="Resources\Materials\Circuits64.png" />
+    <Content Include="Resources\Materials\ControlModule64.png" />
+    <Content Include="Resources\Materials\CopriteAlloy64.png" />
+    <Content Include="Resources\Materials\Credits64.png" />
+    <Content Include="Resources\Materials\Cryotic.png" />
+    <Content Include="Resources\Materials\Ducats64.png" />
+    <Content Include="Resources\Materials\EsherDevar64.png" />
+    <Content Include="Resources\Materials\Ferrite64.png" />
+    <Content Include="Resources\Materials\Forma64.png" />
+    <Content Include="Resources\Materials\Gallium64.png" />
+    <Content Include="Resources\Materials\Grokdrul64.png" />
+    <Content Include="Resources\Materials\Iradite64.png" />
+    <Content Include="Resources\Materials\Kuva64.png" />
+    <Content Include="Resources\Materials\Morphics64.png" />
+    <Content Include="Resources\Materials\NanoSpores64.png" />
+    <Content Include="Resources\Materials\NeuralSensor64.png" />
+    <Content Include="Resources\Materials\Neurode64.png" />
+    <Content Include="Resources\Materials\NitainExtract64.png" />
+    <Content Include="Resources\Materials\OrokinCell64.png" />
+    <Content Include="Resources\Materials\Oxium64.png" />
+    <Content Include="Resources\Materials\Plastids64.png" />
+    <Content Include="Resources\Materials\Platinum64.png" />
+    <Content Include="Resources\Materials\PolymerBundle64.png" />
+    <Content Include="Resources\Materials\PyroticAlloy64.png" />
+    <Content Include="Resources\Materials\Rubedo64.png" />
+    <Content Include="Resources\Materials\Salvage64.png" />
+    <Content Include="Resources\Parts\Chassis.png" />
+    <Content Include="Resources\Parts\Nueroptics.png" />
+    <Content Include="Resources\Parts\PrimeChassis.png" />
+    <Content Include="Resources\Parts\PrimeNueroptics.png" />
+    <Content Include="Resources\Parts\PrimeSystems.png" />
+    <Content Include="Resources\Parts\Systems.png" />
+    <Content Include="Resources\StanceMods\Stance_AstralTwilight.png" />
+    <Content Include="Resources\StanceMods\Stance_AtlantisVulcan.png" />
+    <Content Include="Resources\StanceMods\Stance_BleedingWillow.png" />
+    <Content Include="Resources\StanceMods\Stance_BlindJustice.png" />
+    <Content Include="Resources\StanceMods\Stance_BrutalTideNew.png" />
+    <Content Include="Resources\StanceMods\Stance_BulletDance.png" />
+    <Content Include="Resources\StanceMods\Stance_BurningWasp.png" />
+    <Content Include="Resources\StanceMods\Stance_CarvingMantis.png" />
+    <Content Include="Resources\StanceMods\Stance_ClashingForest.png" />
+    <Content Include="Resources\StanceMods\Stance_CleavingWhirlwind.png" />
+    <Content Include="Resources\StanceMods\Stance_CoilingViper.png" />
+    <Content Include="Resources\StanceMods\Stance_CrimsonDervish.png" />
+    <Content Include="Resources\StanceMods\Stance_CrossingSnakes.png" />
+    <Content Include="Resources\StanceMods\Stance_CrushingRuinNew.png" />
+    <Content Include="Resources\StanceMods\Stance_CycloneKraken.png" />
+    <Content Include="Resources\StanceMods\Stance_DecisiveJudgement.png" />
+    <Content Include="Resources\StanceMods\Stance_DefiledSnapdragonNew.png" />
+    <Content Include="Resources\StanceMods\Stance_EleventhStorm.png" />
+    <Content Include="Resources\StanceMods\Stance_FatefulTruth.png" />
+    <Content Include="Resources\StanceMods\Stance_FlailingBranch.png" />
+    <Content Include="Resources\StanceMods\Stance_FourRiders.png" />
+    <Content Include="Resources\StanceMods\Stance_FracturingWind.png" />
+    <Content Include="Resources\StanceMods\Stance_Gaia%27sTragedy.png" />
+    <Content Include="Resources\StanceMods\Stance_GeminiCrossNew.png" />
+    <Content Include="Resources\StanceMods\Stance_GleamingTalon.png" />
+    <Content Include="Resources\StanceMods\Stance_GnashingPayara.png" />
+    <Content Include="Resources\StanceMods\Stance_GrimFury.png" />
+    <Content Include="Resources\StanceMods\Stance_Harbinger.png" />
+    <Content Include="Resources\StanceMods\Stance_HighNoon.png" />
+    <Content Include="Resources\StanceMods\Stance_HomingFangNew.png" />
+    <Content Include="Resources\StanceMods\Stance_IronPhoenix.png" />
+    <Content Include="Resources\StanceMods\Stance_MaliciousRaptorNew.png" />
+    <Content Include="Resources\StanceMods\Stance_PointedWind.png" />
+    <Content Include="Resources\StanceMods\Stance_ReapingSpiral.png" />
+    <Content Include="Resources\StanceMods\Stance_RendingCrane.png" />
+    <Content Include="Resources\StanceMods\Stance_SeismicPalm.png" />
+    <Content Include="Resources\StanceMods\Stance_ShatteringStorm.png" />
+    <Content Include="Resources\StanceMods\Stance_ShimmeringBlight.png" />
+    <Content Include="Resources\StanceMods\Stance_SinkingTalon.png" />
+    <Content Include="Resources\StanceMods\Stance_SlicingFeathers.png" />
+    <Content Include="Resources\StanceMods\Stance_SovereignOutcast.png" />
+    <Content Include="Resources\StanceMods\Stance_SpinningNeedle.png" />
+    <Content Include="Resources\StanceMods\Stance_StalkingFanNew.png" />
+    <Content Include="Resources\StanceMods\Stance_StingingThorn.png" />
+    <Content Include="Resources\StanceMods\Stance_SunderingWeave.png" />
+    <Content Include="Resources\StanceMods\Stance_SwirlingTiger.png" />
+    <Content Include="Resources\StanceMods\Stance_SwoopingFalcon.png" />
+    <Content Include="Resources\StanceMods\Stance_TempoRoyale.png" />
+    <Content Include="Resources\StanceMods\Stance_TranquilCleave.png" />
+    <Content Include="Resources\StanceMods\Stance_TwirlingSpire.png" />
+    <Content Include="Resources\StanceMods\Stance_VengefulRevenant.png" />
+    <Content Include="Resources\StanceMods\Stance_VermillionStorm.png" />
+    <Content Include="Resources\StanceMods\Stance_VulpineMask.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_AbatingLink.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Afterburn.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_AntimatterAbsorb.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_AntimatterMine.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Assimilate.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_BallisticBullseye.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_BeguilingLantern.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Calm&amp;Frenzy.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Capacitance.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_CataclysmicContinuum.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ChaosSphere.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ChillingGlobe.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ChromaticBlade.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ConcentratedArrow.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ContagionCloud.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_CorrodingBarrage.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_CounterPulse.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_CreepingTerrify.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_CurativeUndertow.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_DeceptiveBond.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_DefiledReckoning.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Despoil.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_DischargeStrike.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Duality.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ElementalSandstorm.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_EnergyTransfer.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_EscapeVelocity.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_EternalWar.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_EverlastingWard.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ExplosiveLegerdemain.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FatalTeleport.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FireballFrenzy.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FireFright.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Firequake.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FlashAccelerant.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FracturingCrush.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FreezeForce.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FunnelClouds.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_FuriousJavelin.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_GreedyPull.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_GuidedEffigy.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_HallOfMalevolence.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_HallowedEruption.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_HallowedReckoning.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Haven.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_HushedInvisibility.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_HystericalAssault.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_HystericalFixation.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_IceWaveImpedance.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_IcyAvalanche.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Infiltrate.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_IroncladCharge.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_IronShrapnel.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_IronVault.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_IrradiatingDisarm.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_JetStream.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_KineticCollision.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_LarvaBurst.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_LastingCovenant.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_MagnetizedDischarge.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Mesa%27sWaltz.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_MindFreak.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_MuzzleFlash.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_NegationSwarm.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_NeutronStar.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_OreGaze.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PacifyingBolts.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PathOfStatues.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PeacefulProvocation.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PerpetualVortex.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PhoenixReal.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PiercingNavigator.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PiercingRoar.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PilferingSwarm.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PoolOfLife.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PowerofThree.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PrimalRage.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PrismGuard.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ProlongedParalysis.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PurgingSlash.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PurifyingFlames.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PushandPull.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_PyroclasticFlow.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_RadiantFinish4.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_RazorwingBlitz.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ReapingChakram.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_RechargeBarrier.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_RegenerativeMolt.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ReinforcingStomp.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_RepellingBastille.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Resonance.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ResonatingQuake.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_RiftTorrent.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_RisingStorm.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Rumbled.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Safeguard.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SafeguardSwitch.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SappingReach.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SavageSilence.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SaviorDecoy.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SeekingShuriken.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ShieldOfShadows.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ShieldOverload.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ShockingSpeed.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_ShockTrooper.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SignalFlare.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_Singularity.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SmiteInfusion.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SmokeShadow.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SonicFracture.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SoulSurvivor.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_StaggeringShield.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SurgingDash.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_SwingLine.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TargetFixation.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TearGas.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TectonicFracture.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TeslaLink.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TidalImpunity.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TitanicRumbler.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TotalEclipse.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_TransistorShield.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_VampireLeech.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_VenomDose.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_VexingRetaliation.png" />
+    <Content Include="Resources\WarframeAugments\WarframeAugment_WardRecovery.png" />
+    <Content Include="Resources\Warframes\Ash\Ash.png" />
+    <Content Include="Resources\Warframes\Ash\AshPrime.png" />
+    <Content Include="Resources\Warframes\Atlas\Atlas.png" />
+    <Content Include="Resources\Warframes\Atlas\SWRNineAtlasMonolithSkin.png" />
+    <Content Include="Resources\Warframes\Atlas\SWRTenAtlasGraxxSkin.png" />
+    <Content Include="Resources\Warframes\Banshee\Banshee.png" />
+    <Content Include="Resources\Warframes\Banshee\BansheePrime.png" />
+    <Content Include="Resources\Warframes\Chroma\Chroma.png" />
+    <Content Include="Resources\Warframes\Ember\Ember.png" />
+    <Content Include="Resources\Warframes\Ember\EmberPrime.png" />
+    <Content Include="Resources\Warframes\Equinox\AnimaAspect.png" />
+    <Content Include="Resources\Warframes\Equinox\AnimusAspect.png" />
+    <Content Include="Resources\Warframes\Equinox\Equinox.png" />
+    <Content Include="Resources\Warframes\Equinox\EquinoxDay.png" />
+    <Content Include="Resources\Warframes\Equinox\EquinoxNight.png" />
+    <Content Include="Resources\Warframes\Excalibur\Excalibur.png" />
+    <Content Include="Resources\Warframes\Excalibur\ExcaliburPrime.png" />
+    <Content Include="Resources\Warframes\Frost\Frost.png" />
+    <Content Include="Resources\Warframes\Frost\FrostPrime.png" />
+    <Content Include="Resources\Warframes\Gara\Gara.png" />
+    <Content Include="Resources\Warframes\Harrow\Harrow.png" />
+    <Content Include="Resources\Warframes\Hydroid\Hydroid.png" />
+    <Content Include="Resources\Warframes\Hydroid\HydroidPrime.png" />
+    <Content Include="Resources\Warframes\Inaros\Inaros.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_AvengingTruth.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_BladeofTruth.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_BrightPurity.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_DeadlySequence.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_DisarmingPurity.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_EntropyBurst.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_EntropyDetonation.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_EntropyFlight.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_EntropySpike.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_ErodingBlight.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_GildedTruth.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_GleamingBlight.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_JusticeBlades.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_LastingPurity.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_NeutralizingJustice.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_ScatteredJustice.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_SequenceBurn.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_ShatteringJustice.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_StingingTruth.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_StockpiledBlight.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_ToxicBlight.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_ToxicSequence.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_VoltageSequence.png" />
+    <Content Include="Resources\WeaponAugments\WeaponAugment_WindsOfPurity..png" />
+    <None Include="Resources\AuraMods\Aura_ToxinResistance.png" />
+    <None Include="Resources\AuraMods\Aura_SteelCharge.png" />
+    <None Include="Resources\AuraMods\Aura_StandUnited.png" />
+    <None Include="Resources\AuraMods\Aura_SprintBoost.png" />
+    <None Include="Resources\AuraMods\Aura_SpeedHolster.png" />
+    <None Include="Resources\AuraMods\Aura_SniperScavenger.png" />
+    <None Include="Resources\AuraMods\Aura_ShotgunScavenger.png" />
+    <None Include="Resources\AuraMods\Aura_ShotgunAmp.png" />
+    <None Include="Resources\AuraMods\Aura_ShieldDisruption.png" />
+    <None Include="Resources\AuraMods\Aura_RifleScavenger.png" />
+    <None Include="Resources\AuraMods\Aura_RifleAmp.png" />
+    <None Include="Resources\AuraMods\Aura_Rejuvenation.png" />
+    <None Include="Resources\AuraMods\Aura_PistolScavenger.png" />
+    <None Include="Resources\AuraMods\Aura_PistolAmp.png" />
+    <None Include="Resources\AuraMods\Aura_Physique.png" />
+    <None Include="Resources\AuraMods\Aura_LootDetector.png" />
+    <None Include="Resources\AuraMods\Aura_InfestedImpedance.png" />
+    <None Include="Resources\AuraMods\Aura_GrowingPower.png" />
+    <None Include="Resources\AuraMods\Aura_EnergySiphon.png" />
+    <None Include="Resources\AuraMods\Aura_EnemyRadar.png" />
+    <None Include="Resources\AuraMods\Aura_EmpoweredBlades.png" />
+    <None Include="Resources\AuraMods\Aura_EMPAura.png" />
+    <None Include="Resources\AuraMods\Aura_DeadEye.png" />
+    <None Include="Resources\AuraMods\Aura_CorrosiveProjection.png" />
+    <None Include="Resources\AuraMods\Aura_BriefRespite.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Unleashed.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Stalk.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Shelter.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Scavenge.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Savagery.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Retrieve.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Protect.png" />
+    <None Include="Resources\KubrowMods\Kubrow_PackLeader.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Neutralize.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Medi-PetKit.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Maul.png" />
+    <None Include="Resources\KubrowMods\Kubrow_LoyalCompanion.png" />
+    <None Include="Resources\KubrowMods\Kubrow_LinkShields.png" />
+    <None Include="Resources\KubrowMods\Kubrow_LinkHealth.png" />
+    <None Include="Resources\KubrowMods\Kubrow_LinkArmor.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Hunt.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Howl.png" />
+    <None Include="Resources\KubrowMods\Kubrow_HastenedDeflection.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Ferocity.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Dig.png" />
+    <None Include="Resources\KubrowMods\Kubrow_Bite.png" />
+    <None Include="Resources\KubrowMods\Kubrow_AnimalInstinct.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Warrior.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Vaporize.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Thumper.png" />
+    <None Include="Resources\SentinelMods\Sentinel_TargetingReceptor.png" />
+    <None Include="Resources\SentinelMods\Sentinel_SwiftDeth.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Striker.png" />
+    <None Include="Resources\SentinelMods\Sentinel_SpareParts.png" />
+    <None Include="Resources\SentinelMods\Sentinel_ShieldCharger.png" />
+    <None Include="Resources\SentinelMods\Sentinel_SelfDestruct.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Sanctuary.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Sacrifice.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Revenge.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Retarget.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Regen.png" />
+    <None Include="Resources\SentinelMods\Sentinel_PrimedRegen.png" />
+    <None Include="Resources\SentinelMods\Sentinel_MolecularConversion.png" />
+    <None Include="Resources\SentinelMods\Sentinel_MetalFiber.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Medi-Ray.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Looter.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Investigator.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Guardian.png" />
+    <None Include="Resources\SentinelMods\Sentinel_Ghost.png" />
+    <None Include="Resources\SentinelMods\Sentinel_FiredUp.png" />
+    <None Include="Resources\SentinelMods\Sentinel_FatalAttraction.png" />
+    <None Include="Resources\SentinelMods\Sentinel_EnhancedVitality.png" />
+    <None Include="Resources\SentinelMods\Sentinel_ElectroPulse.png" />
+    <None Include="Resources\SentinelMods\Sentinel_DetectVulnerability.png" />
+    <None Include="Resources\SentinelMods\Sentinel_CrowdDispersion.png" />
+    <None Include="Resources\SentinelMods\Sentinel_CoolantLeak.png" />
+    <None Include="Resources\SentinelMods\Sentinel_CalculatedShot.png" />
+    <None Include="Resources\SentinelMods\Sentinel_CalculatedRedirection.png" />
+    <None Include="Resources\SentinelMods\Sentinel_ArcCoil.png" />
+    <None Include="Resources\SentinelMods\Sentinel_AnimalInstinct.png" />
+    <None Include="Resources\SentinelMods\Sentinel_AmmoCase.png" />
+    <None Include="Resources\SentinelMods\Sentinel_AcceleratedDeflection.png" />
+    <None Include="Resources\MeleeMods\Melee_Whirlwind.png" />
+    <None Include="Resources\MeleeMods\Melee_WeepingWounds.png" />
+    <None Include="Resources\MeleeMods\Melee_VoltaicStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_VolcanicEdge.png" />
+    <None Include="Resources\MeleeMods\Melee_VirulentScourge.png" />
+    <None Include="Resources\MeleeMods\Melee_ViciousFrost.png" />
+    <None Include="Resources\MeleeMods\Melee_TrueSteel.png" />
+    <None Include="Resources\MeleeMods\Melee_TruePunishment.png" />
+    <None Include="Resources\MeleeMods\Melee_SunderingStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_SpoiledStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_SmiteInfested.png" />
+    <None Include="Resources\MeleeMods\Melee_SmiteGrineer.png" />
+    <None Include="Resources\MeleeMods\Melee_SmiteCorpus.png" />
+    <None Include="Resources\MeleeMods\Melee_ShockingTouch.png" />
+    <None Include="Resources\MeleeMods\Melee_SeismicWave.png" />
+    <None Include="Resources\MeleeMods\Melee_RendingStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_RelentlessCombination.png" />
+    <None Include="Resources\MeleeMods\Melee_ReflexCoil.png" />
+    <None Include="Resources\MeleeMods\Melee_Rebound.png" />
+    <None Include="Resources\MeleeMods\Melee_Reach.png" />
+    <None Include="Resources\MeleeMods\Melee_QuickReturn.png" />
+    <None Include="Resources\MeleeMods\Melee_Quickening.png" />
+    <None Include="Resources\MeleeMods\Melee_PrimedReach.png" />
+    <None Include="Resources\MeleeMods\Melee_PrimedPressurePoint.png" />
+    <None Include="Resources\MeleeMods\Melee_PrimedHeavyTrauma.png" />
+    <None Include="Resources\MeleeMods\Melee_PrimedFeverStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_PressurePoint.png" />
+    <None Include="Resources\MeleeMods\Melee_PowerThrow.png" />
+    <None Include="Resources\MeleeMods\Melee_Parry.png" />
+    <None Include="Resources\MeleeMods\Melee_OrganShatter.png" />
+    <None Include="Resources\MeleeMods\Melee_NorthWind.png" />
+    <None Include="Resources\MeleeMods\Melee_MoltenImpact.png" />
+    <None Include="Resources\MeleeMods\Melee_MeleeProwess.png" />
+    <None Include="Resources\MeleeMods\Melee_MaimingStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_LifeStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_LastingSting.png" />
+    <None Include="Resources\MeleeMods\Melee_KillingBlow.png" />
+    <None Include="Resources\MeleeMods\Melee_JaggedEdge.png" />
+    <None Include="Resources\MeleeMods\Melee_HeavyTrauma.png" />
+    <None Include="Resources\MeleeMods\Melee_HealingReturn.png" />
+    <None Include="Resources\MeleeMods\Melee_GuardianDerision.png" />
+    <None Include="Resources\MeleeMods\Melee_Fury.png" />
+    <None Include="Resources\MeleeMods\Melee_FocusEnergy.png" />
+    <None Include="Resources\MeleeMods\Melee_FocusedDefense.png" />
+    <None Include="Resources\MeleeMods\Melee_FinishingTouch.png" />
+    <None Include="Resources\MeleeMods\Melee_FeverStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_EnergyChannel.png" />
+    <None Include="Resources\MeleeMods\Melee_EnduringStrike.png" />
+    <None Include="Resources\MeleeMods\Melee_EnduringAffliction.png" />
+    <None Include="Resources\MeleeMods\Melee_DriftingContact.png" />
+    <None Include="Resources\MeleeMods\Melee_DispatchOverdrive.png" />
+    <None Include="Resources\MeleeMods\Melee_CorruptCharge.png" />
+    <None Include="Resources\MeleeMods\Melee_ConditionOverload.png" />
+    <None Include="Resources\MeleeMods\Melee_CollisionForce.png" />
+    <None Include="Resources\MeleeMods\Melee_BuzzKill.png" />
+    <None Include="Resources\MeleeMods\Melee_BodyCount.png" />
+    <None Include="Resources\MeleeMods\Melee_BloodRush.png" />
+    <None Include="Resources\MeleeMods\Melee_Berserker.png" />
+    <None Include="Resources\MeleeMods\Melee_AugerStrike.png" />
+    <None Include="Resources\PistolMods\Pistol_TrickMag.png" />
+    <None Include="Resources\PistolMods\Pistol_TargetingSubsystem.png" />
+    <None Include="Resources\PistolMods\Pistol_TargetCracker.png" />
+    <None Include="Resources\PistolMods\Pistol_TaintedClip.png" />
+    <None Include="Resources\PistolMods\Pistol_SureShot.png" />
+    <None Include="Resources\PistolMods\Pistol_Suppress.png" />
+    <None Include="Resources\PistolMods\Pistol_StunningSpeed.png" />
+    <None Include="Resources\PistolMods\Pistol_StrafingSlide.png" />
+    <None Include="Resources\PistolMods\Pistol_SteadyHands.png" />
+    <None Include="Resources\PistolMods\Pistol_SprySights.png" />
+    <None Include="Resources\PistolMods\Pistol_SlipMagazine.png" />
+    <None Include="Resources\PistolMods\Pistol_SharpenedBullets.png" />
+    <None Include="Resources\PistolMods\Pistol_Seeker.png" />
+    <None Include="Resources\PistolMods\Pistol_SecondaryWind.png" />
+    <None Include="Resources\PistolMods\Pistol_Scorch.png" />
+    <None Include="Resources\PistolMods\Pistol_RuinousExtension.png" />
+    <None Include="Resources\PistolMods\Pistol_ReflexDraw.png" />
+    <None Include="Resources\PistolMods\Pistol_Recuperate.png" />
+    <None Include="Resources\PistolMods\Pistol_RazorShot.png" />
+    <None Include="Resources\PistolMods\Pistol_RazorMunitions.png" />
+    <None Include="Resources\PistolMods\Pistol_Quickdraw.png" />
+    <None Include="Resources\PistolMods\Pistol_Pummel.png" />
+    <None Include="Resources\PistolMods\Pistol_PrimedTargetCracker.png" />
+    <None Include="Resources\PistolMods\Pistol_PrimedSlipMagazine.png" />
+    <None Include="Resources\PistolMods\Pistol_PrimedPistolGambit.png" />
+    <None Include="Resources\PistolMods\Pistol_PrimedPistolAmmoMutation.png" />
+    <None Include="Resources\PistolMods\Pistol_PrimedHeatedCharge.png" />
+    <None Include="Resources\PistolMods\Pistol_PressurisedMagazine.png" />
+    <None Include="Resources\PistolMods\Pistol_PistolPestilence.png" />
+    <None Include="Resources\PistolMods\Pistol_PistolGambit.png" />
+    <None Include="Resources\PistolMods\Pistol_PistolAmmoMutation.png" />
+    <None Include="Resources\PistolMods\Pistol_PerpetualAgony.png" />
+    <None Include="Resources\PistolMods\Pistol_PathogenRounds.png" />
+    <None Include="Resources\PistolMods\Pistol_NoReturn.png" />
+    <None Include="Resources\PistolMods\Pistol_NightStalker.png" />
+    <None Include="Resources\PistolMods\Pistol_MeteorMunitions.png" />
+    <None Include="Resources\PistolMods\Pistol_Maim.png" />
+    <None Include="Resources\PistolMods\Pistol_MagnumForce.png" />
+    <None Include="Resources\PistolMods\Pistol_LooseMagazine.png" />
+    <None Include="Resources\PistolMods\Pistol_LethalTorrent.png" />
+    <None Include="Resources\PistolMods\Pistol_LethalMomentum.png" />
+    <None Include="Resources\PistolMods\Pistol_Jolt.png" />
+    <None Include="Resources\PistolMods\Pistol_ImpalerMunitions.png" />
+    <None Include="Resources\PistolMods\Pistol_IceStorm.png" />
+    <None Include="Resources\PistolMods\Pistol_HydraulicCrosshairs.png" />
+    <None Include="Resources\PistolMods\Pistol_HydraulicBarrel.png" />
+    <None Include="Resources\PistolMods\Pistol_HornetStrike.png" />
+    <None Include="Resources\PistolMods\Pistol_HollowPoint.png" />
+    <None Include="Resources\PistolMods\Pistol_HeavyWarhead.png" />
+    <None Include="Resources\PistolMods\Pistol_HeatedCharge.png" />
+    <None Include="Resources\PistolMods\Pistol_HawkEye.png" />
+    <None Include="Resources\PistolMods\Pistol_Gunslinger.png" />
+    <None Include="Resources\PistolMods\Pistol_FullCapacity.png" />
+    <None Include="Resources\PistolMods\Pistol_Frostbite.png" />
+    <None Include="Resources\PistolMods\Pistol_ExpelInfested.png" />
+    <None Include="Resources\PistolMods\Pistol_ExpelGrineer.png" />
+    <None Include="Resources\PistolMods\Pistol_ExpelCorpus.png" />
+    <None Include="Resources\PistolMods\Pistol_EmbeddedCatalyzer.png" />
+    <None Include="Resources\PistolMods\Pistol_EjectMagazine.png" />
+    <None Include="Resources\PistolMods\Pistol_DeepFreeze.png" />
+    <None Include="Resources\PistolMods\Pistol_CreepingBullseye.png" />
+    <None Include="Resources\PistolMods\Pistol_Convulsion.png" />
+    <None Include="Resources\PistolMods\Pistol_ConcussionRounds.png" />
+    <None Include="Resources\PistolMods\Pistol_CalculatedVictory.png" />
+    <None Include="Resources\PistolMods\Pistol_Bore.png" />
+    <None Include="Resources\PistolMods\Pistol_BlindShot.png" />
+    <None Include="Resources\PistolMods\Pistol_BarrelDiffusion.png" />
+    <None Include="Resources\PistolMods\Pistol_AnemicAgility.png" />
+    <None Include="Resources\PistolMods\Pistol_AirRecon.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ViciousSpread.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ToxicBarrage.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_TaintedShell.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_TacticalPump.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_SweepingSerration.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_SoftHands.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_SnapShot.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_SilentBattery.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ShredShot.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_Shredder.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ShrapnelShot.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ShotgunSpazz.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ShotgunSavvy.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ShotgunAmmoMutation.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ShellShock.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ShellCompression.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_SeekingFury.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_SeekingForce.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ScatteringInferno.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_RepeaterClip.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_Ravage.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_PrizeKill.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_PrimedShotgunAmmoMutation.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_PrimedRavage.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_PrimedPointBlank.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_PointBlank.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_NarrowBarrel.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_Nano-Applicator.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_MomentaryPause.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_LooseChamber.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_LockandLoad.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_LoadedCapacity.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_LingeringTorment.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_LaserSight.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_KillSwitch.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_IncendiaryCoat.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_HydraulicChamber.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_HellsChamber.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_FullContact.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_FrigidBlast.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_FrailMomentum.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_Flechette.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_FlakShot.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_FatalAcceleration.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_DoubleBarrelDrift.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_Disruptor.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_CriticalDeceleration.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_CrashShot.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ContagiousSpread.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_CleanseInfested.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_CleanseGrineer.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_CleanseCorpus.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ChillingReload.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ChillingGrasp.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_ChargedShell.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_BurdenedMagazine.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_BroadEye.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_BreachLoader.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_BountyHunter.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_Blunderbuss.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_Blaze.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_AmmoStock.png" />
+    <None Include="Resources\ShotgunMods\Shotgun_AcceleratedBlast.png" />
+    <None Include="Resources\RifleMods\Wildfire.png" />
+    <None Include="Resources\RifleMods\VitalSense.png" />
+    <None Include="Resources\RifleMods\VilePrecision.png" />
+    <None Include="Resources\RifleMods\VileAcceleration.png" />
+    <None Include="Resources\RifleMods\VanquishedPrey.png" />
+    <None Include="Resources\RifleMods\Twitch.png" />
+    <None Include="Resources\RifleMods\ThermiteRounds.png" />
+    <None Include="Resources\RifleMods\TerminalVelocity.png" />
+    <None Include="Resources\RifleMods\Stormbringer.png" />
+    <None Include="Resources\RifleMods\Stabilizer.png" />
+    <None Include="Resources\RifleMods\SplitChamber.png" />
+    <None Include="Resources\RifleMods\SpeedTrigger.png" />
+    <None Include="Resources\RifleMods\SinisterReach.png" />
+    <None Include="Resources\RifleMods\Shred.png" />
+    <None Include="Resources\RifleMods\Serration.png" />
+    <None Include="Resources\RifleMods\SerratedRounds.png" />
+    <None Include="Resources\RifleMods\SawtoothClip.png" />
+    <None Include="Resources\RifleMods\Rupture.png" />
+    <None Include="Resources\RifleMods\RipperRounds.png" />
+    <None Include="Resources\RifleMods\RimeRounds.png" />
+    <None Include="Resources\RifleMods\RifleAptitude.png" />
+    <None Include="Resources\RifleMods\Recover.png" />
+    <None Include="Resources\RifleMods\PrimedFastHands.png" />
+    <None Include="Resources\RifleMods\PrimedCryoRounds.png" />
+    <None Include="Resources\RifleMods\PrimedBaneOfInfested.png" />
+    <None Include="Resources\RifleMods\PrimedBaneOfGrineer.png" />
+    <None Include="Resources\RifleMods\PrimedBaneOfCorpus.png" />
+    <None Include="Resources\RifleMods\PointStrike.png" />
+    <None Include="Resources\RifleMods\PiercingHit.png" />
+    <None Include="Resources\RifleMods\PiercingCaliber.png" />
+    <None Include="Resources\RifleMods\MetalAuger.png" />
+    <None Include="Resources\RifleMods\MalignantForce.png" />
+    <None Include="Resources\RifleMods\MagazineWarp.png" />
+    <None Include="Resources\RifleMods\LuckyShot.png" />
+    <None Include="Resources\RifleMods\InfectedClip.png" />
+    <None Include="Resources\RifleMods\Hush.png" />
+    <None Include="Resources\RifleMods\HighVoltage.png" />
+    <None Include="Resources\RifleMods\Hellfire.png" />
+    <None Include="Resources\RifleMods\HeavyCaliber.png" />
+    <None Include="Resources\RifleMods\HammerShot.png" />
+    <None Include="Resources\RifleMods\Firestorm.png" />
+    <None Include="Resources\RifleMods\FastHands.png" />
+    <None Include="Resources\RifleMods\FangedFusillade.png" />
+    <None Include="Resources\RifleMods\EagleEye.png" />
+    <None Include="Resources\RifleMods\CryoRounds.png" />
+    <None Include="Resources\RifleMods\CriticalDelay.png" />
+    <None Include="Resources\RifleMods\CrashCourse.png" />
+    <None Include="Resources\RifleMods\ContinuousMisery.png" />
+    <None Include="Resources\RifleMods\CometRounds.png" />
+    <None Include="Resources\RifleMods\CombustionBeam.png" />
+    <None Include="Resources\RifleMods\CatalyzerLink.png" />
+    <None Include="Resources\RifleMods\BladedRounds.png" />
+    <None Include="Resources\RifleMods\BaneOfInfested.png" />
+    <None Include="Resources\RifleMods\BaneOfGrineer.png" />
+    <None Include="Resources\RifleMods\BaneOfCorpus.png" />
+    <None Include="Resources\RifleMods\ArgonScope.png" />
+    <None Include="Resources\RifleMods\ApexPredator.png" />
+    <None Include="Resources\RifleMods\AmmoDrum.png" />
+    <None Include="Resources\RifleMods\AgileAim.png" />
+    <None Include="Resources\WarframeMods\WarmCoat.png" />
+    <None Include="Resources\WarframeMods\Vitality.png" />
+    <None Include="Resources\WarframeMods\Vigor.png" />
+    <None Include="Resources\WarframeMods\UndyingWill.png" />
+    <None Include="Resources\WarframeMods\TransientFortitude.png" />
+    <None Include="Resources\WarframeMods\ThiefsWit.png" />
+    <None Include="Resources\WarframeMods\SureFooted.png" />
+    <None Include="Resources\WarframeMods\Stretch.png" />
+    <None Include="Resources\WarframeMods\StreamlinedForm.png" />
+    <None Include="Resources\WarframeMods\Streamline.png" />
+    <None Include="Resources\WarframeMods\SteelFiber.png" />
+    <None Include="Resources\WarframeMods\ShockAbsorbers.png" />
+    <None Include="Resources\WarframeMods\Rush.png" />
+    <None Include="Resources\WarframeMods\Retribution.png" />
+    <None Include="Resources\WarframeMods\ReflexGuard.png" />
+    <None Include="Resources\WarframeMods\Reflection.png" />
+    <None Include="Resources\WarframeMods\Redirection.png" />
+    <None Include="Resources\WarframeMods\RapidResilience.png" />
+    <None Include="Resources\WarframeMods\Rage.png" />
+    <None Include="Resources\WarframeMods\QuickThinking.png" />
+    <None Include="Resources\WarframeMods\Provoked.png" />
+    <None Include="Resources\WarframeMods\PrimedVigor.png" />
+    <None Include="Resources\WarframeMods\PrimedFlow.png" />
+    <None Include="Resources\WarframeMods\PrimedContinuity.png" />
+    <None Include="Resources\WarframeMods\Overextended.png" />
+    <None Include="Resources\WarframeMods\NaturalTalent.png" />
+    <None Include="Resources\WarframeMods\NarrowMinded.png" />
+    <None Include="Resources\WarframeMods\MasterThief.png" />
+    <None Include="Resources\WarframeMods\Maglev.png" />
+    <None Include="Resources\WarframeMods\LightningRod.png" />
+    <None Include="Resources\WarframeMods\Intruder.png" />
+    <None Include="Resources\WarframeMods\Intensify.png" />
+    <None Include="Resources\WarframeMods\Insulation.png" />
+    <None Include="Resources\WarframeMods\HeavyImpact.png" />
+    <None Include="Resources\WarframeMods\Handspring.png" />
+    <None Include="Resources\WarframeMods\Fortitude.png" />
+    <None Include="Resources\WarframeMods\Flow.png" />
+    <None Include="Resources\WarframeMods\FleetingExpertise.png" />
+    <None Include="Resources\WarframeMods\FlameRepellent.png" />
+    <None Include="Resources\WarframeMods\FastDeflection.png" />
+    <None Include="Resources\WarframeMods\Equilibrium.png" />
+    <None Include="Resources\WarframeMods\EnemySense.png" />
+    <None Include="Resources\WarframeMods\DiamondSkin.png" />
+    <None Include="Resources\WarframeMods\Continuity.png" />
+    <None Include="Resources\WarframeMods\Constitution.png" />
+    <None Include="Resources\WarframeMods\BlindRage.png" />
+    <None Include="Resources\WarframeMods\Aviator.png" />
+    <None Include="Resources\WarframeMods\AugurMessage.png" />
+    <None Include="Resources\WarframeMods\ArmoredAgility.png" />
+    <None Include="Resources\WarframeMods\Antitoxin.png" />
+    <Content Include="warframe.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
